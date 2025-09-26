@@ -1,2 +1,4 @@
-# blogmd
-Chuyên đẩy các bài blog viết bằng file .md 
+# 👋 Xin chào tất cả mọi người đến với Coder Cơ bắp 
+
+Chào mừng bạn đến với **Coder Cơ bắp**!
+
