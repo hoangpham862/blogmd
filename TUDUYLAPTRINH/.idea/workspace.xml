@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="58e9ce76-f4fd-4f60-bc34-8b86d1c70552" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/main/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/62466.png" beforeDir="false" afterPath="$PROJECT_DIR$/mdFile/62466.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngay_.md" beforeDir="false" afterPath="$PROJECT_DIR$/mdFile/ngay_.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngay_1.md" beforeDir="false" afterPath="$PROJECT_DIR$/mdFile/ngay_1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngay_2.md" beforeDir="false" afterPath="$PROJECT_DIR$/mdFile/ngay_2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngay_3.md" beforeDir="false" afterPath="$PROJECT_DIR$/mdFile/ngay_3.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngay_4_tim_so_to_nhat.md" beforeDir="false" afterPath="$PROJECT_DIR$/mdFile/ngay_4_tim_so_to_nhat.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngay_5.md" beforeDir="false" afterPath="$PROJECT_DIR$/mdFile/ngay_5.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="33yFRFQFaOPw6dlfJIDR75UsYWc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;tu__duy__lap__trinh&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Volumes/KIOXIA-ExternalSSD/blog/blogmd/TUDUYLAPTRINH/main/src/main/java/com/hquiz/Main.java&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mdFile" />
+    </key>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58e9ce76-f4fd-4f60-bc34-8b86d1c70552" name="Changes" comment="" />
+      <created>1760281398728</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760281398728</updated>
+    </task>
+    <servers />
+  </component>
+</project>
