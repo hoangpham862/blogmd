@@ -21,3 +21,10 @@ rad.json
 #Test results file
 TestResults.xml
 .idea
+//
+target/
+*.class
+.settings/
+.project
+.classpath
+.factorypath
