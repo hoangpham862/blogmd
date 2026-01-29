@@ -1,0 +1,76 @@
+TỔNG HỢP NỘI DUNG PHỎNG VẤN SENIOR FLUTTER DEVELOPER
+1. Xử lý Dữ liệu Real-time & Hiệu năng UI
+
+Câu hỏi: Làm thế nào để cập nhật bảng giá chứng khoán nhảy liên tục mà không gây giật lag (re-build) toàn bộ màn hình?
+
+Câu trả lời của bạn: Sử dụng Socket.IO để nhận dữ liệu. Quản lý danh sách mã bằng Map để truy xuất nhanh. Sử dụng Selector để chỉ lắng nghe và re-build đúng Widget của mã đó, tránh render lại cả danh sách.
+
+Góp ý từ Senior: * Điểm tốt: Tư duy dùng Map và Selector (Atomic Re-build) rất chuẩn.
+
+Nâng cấp: Hãy nhắc thêm về Throttling/Debouncing dữ liệu từ Socket (ví dụ: dù dữ liệu về 100 lần/giây, UI chỉ cập nhật tối đa 10-20 lần/giây để tiết kiệm CPU/Pin).
+
+Kỹ thuật: Nhắc đến việc hủy Subscribe các mã nằm ngoài vùng nhìn thấy (Viewport) khi scroll nhanh để tối ưu băng thông.
+
+2. Tích hợp Native SDK (eKYC & CA)
+
+Câu hỏi: Cách giao tiếp với SDK Native và xử lý vấn đề bộ nhớ khi nhận dữ liệu nặng (ảnh/video eKYC)?
+
+Câu trả lời của bạn: Sử dụng MethodChannel để gọi hàm Native (Kotlin/Swift). Nhận kết quả qua Callback. Nếu dữ liệu là ảnh (Base64), sau khi upload xong sẽ gọi hàm reset/xóa dữ liệu ở phía SDK để giải phóng bộ nhớ.
+
+Góp ý từ Senior:
+
+Điểm tốt: Ý tưởng xóa dữ liệu tạm ngay lập tức để tránh OOM (Out of Memory) là điểm cộng cực lớn cho dự án Fintech.
+
+Nâng cấp: Với vấn đề Min SDK (xung đột phiên bản), hãy đề xuất phương án "Kiểm tra phiên bản OS" (Conditional logic) để bật/tắt tính năng theo đời máy thay vì chỉ thương lượng 3 bên.
+
+3. Firebase Remote Config & Bảo mật
+
+Câu hỏi: Cách sử dụng Remote Config an toàn và cập nhật giá trị mà không cần khởi động lại App?
+
+Câu trả lời của bạn: Sử dụng cơ chế Fetch & Activate. Để cập nhật ngay lập tức, sử dụng hàm Listener (lắng nghe thay đổi thực tế) của Firebase. Bạn cũng phản biện về rủi ro lộ thông tin nếu bị lộ file config.
+
+Góp ý từ Senior:
+
+Điểm tốt: Nắm bắt được tính năng Real-time Remote Config mới. Có tư duy bảo mật (Security mindset) tốt.
+
+Nâng cấp: Đề cập đến Firebase App Check để ngăn chặn máy lạ giả mạo App fetch data và luôn có Default Values trong code để làm phương án dự phòng (fallback).
+
+4. Quản lý State & Dòng tiền (Consistency)
+
+Câu hỏi: Làm sao để số dư tiền đồng nhất trên tất cả màn hình khi có thay đổi?
+
+Câu trả lời của bạn: Sử dụng tầng Domain làm trung tâm. Dùng BehaviorSubject (Stream) để lưu trữ số dư. Tất cả màn hình (Dashboard, Lịch sử...) đều lắng nghe từ một nguồn duy nhất này (Single Source of Truth). Khi dữ liệu quan trọng thay đổi, ưu tiên gọi lại API để đồng bộ.
+
+Góp ý từ Senior:
+
+Điểm tốt: Kiến trúc tầng Domain rõ ràng, áp dụng đúng nguyên lý SSOT.
+
+Nâng cấp: Nhấn mạnh việc Encapsulation (Đóng gói): UI chỉ được listen Stream, không được trực tiếp add dữ liệu vào Stream để tránh làm sai lệch logic dòng tiền.
+
+5. Review Code & Tối ưu hóa Source Code
+
+Câu hỏi: Tiêu chí review code cho Junior và cách tránh Memory Leak?
+
+Câu trả lời của bạn: Tránh setState ở màn hình lớn, tách logic ra khỏi UI (đưa xuống Provider/Notifier). Kiểm tra context trước khi dùng (vì context có thể bị null khi pop màn hình).
+
+Góp ý từ Senior:
+
+Điểm tốt: Quy tắc tách biệt trách nhiệm (Separation of Concerns) rõ ràng.
+
+Nâng cấp: Sử dụng thuật ngữ chuyên môn là "Mounted Check" (if (!mounted) return;) và đề cập đến việc kiểm tra việc giải phóng tài nguyên (như StreamSubscription.cancel() hoặc TextEditingController.dispose()).
+
+6. Khả năng Tùy biến (Custom Library)
+
+Câu hỏi: Bạn làm gì khi thư viện bên thứ 3 thiếu tính năng hoặc bị lỗi?
+
+Câu trả lời của bạn: Chủ động Fork thư viện về để Custom. Bạn đã từng Fork fl_chart để thêm tính năng Zoom và Scroll cho đồ thị – thứ mà thư viện gốc chưa hỗ trợ mượt mà.
+
+Góp ý từ Senior: * Đánh giá: Đây là phần thể hiện năng lực Senior mạnh nhất. Nó chứng tỏ bạn có khả năng đọc hiểu mã nguồn sâu và can thiệp vào tầng Render/Gesture của Flutter.
+
+ĐÁNH GIÁ CHUNG:
+
+Trình độ hiện tại: Bạn đang ở mức Senior (~3 năm kinh nghiệm thực tế) dù thời gian làm việc mới 2 năm. Kinh nghiệm làm app ví điện tử và sàn giao dịch là những "case study" rất giá trị.
+
+Thế mạnh: Tư duy tối ưu hiệu năng và bảo mật rất thực tế.
+
+Bước tiếp theo: Bạn có muốn tôi hỗ trợ soạn một bản CV/Resume tóm tắt lại các dự án phái sinh và ví điện tử này sao cho "bắt mắt" nhất với các HR công ty Fintech không? Hay bạn muốn tôi thiết kế một bài test code nhỏ để bạn tự luyện tập?
