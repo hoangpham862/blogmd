@@ -6,7 +6,7 @@ This guide explains how to configure **Firebase Remote Config** in your Flutter 
 
 ## 🚀 Step 1: Initialize Remote Config
 
-After successfully setting up Firebase, you can initialize and configure Remote Config as follows:
+After successfully setting up Firebase, you can initialize and configure Remote Config as follows: 
 
 ```dart
 import 'package:firebase_remote_config/firebase_remote_config.dart';

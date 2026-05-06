@@ -1,0 +1,39 @@
+Sự khác nhau giữa val, var, const val, dynamic 
+
+val: nó đơn giản là một hằng số không thể thay đổi giá trị khi chúng đc khởi tạo xong 
+var: nó là một biến suy luận kiểu tức là khi biên dịch mã nó sẽ được tự động gán kiểu 
+dynamic: không quan tâm là kiểu dữ liệu gì cứ đến là oke hết
+
+const val: là hằng số hệ thống không thay đổi trong khi biên dịch mã và không thay đổi 
+trong suốt vòng đời của ứng dụng
+
+Data Classes: Thay vì viết hàng chục dòng code cho Model như trong Dart, Kotlin chỉ cần 1 dòng: data class User(val name: String, val age: Int).
+
+Extension Functions: Bạn có thể thêm hàm mới vào một Class có sẵn mà không cần kế thừa (Flutter cũng có cái này nhưng Kotlin dùng phổ biến hơn nhiều).
+
+Higher-Order Functions & Lambdas: Cách truyền hàm như một tham số (rất quan trọng để xử lý sự kiện trong UI).
+
+
+data class trong kotlin cũng giống như record trong java vậy dùng để lưu trữ dữ liệu khai báo một cách gọn nhẹ không dài dòng
+
+cú pháp: data class User(val name: String, val age: Int){
+    // khởi tạo giá trị mặc định
+    constructor() : this("", 0)
+}
+
+Extention Functions: mở rộng chức năng cho một class có sẵn mà không cần kế thừa gì hết. ví dụ như String có thể thêm 
+hàm viết hoa chữ cái đầu tiên 
+
+fun String.capitalizeFirst(): String {
+    return this.capitalize()
+}
+
+nó chỉ mở rộng thôi nếu mà chúng ta viết trùng tên, tham số với các hàm phương thức có sẵn thì nó sẽ bị ghi đè 
+không bao giờ được gọi. 
+nó không thể thay đổi được các thuộc tính của class gốc chỉ có thể thêm các phương thức mới thôi 
+và nó cũng chỉ có thể truy cập được vào các thuộc tính public của class gốc thôi 
+khi sử dụng biến this. thì nó sẽ trở đến class gốc và chỉ có thể sử dụng các thuộc tính public của class gốc thôi 
+
+
+
+
