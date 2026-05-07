@@ -13,7 +13,11 @@ Cho một mảng số nguyên và một số nguyên kết quả. Mục tiêu tr
 
 */
 /*
-==> Solution 1: dùng vòng lặp lồng nhau để lặp và tính tổng
+==> Solution 1: dùng vòng lặp lồng nhau để lặp và tính tổng : dùng 2 vòng lặp for lặp qua từng phần tử để sum nếu thỏa mãn thì return kết 
+quả.
+
+==> Solution 2: Dùng một map để lưu các phần tử và kiểm tra nếu phần tử cần tìm đã tồn tại trong map thì 
+return kết quả.
 
 
 
@@ -29,7 +33,6 @@ public class TwoSum {
                     return result;
                 }
             }
-
         }
         return result;
     }
@@ -45,6 +48,6 @@ public class TwoSum {
         }
         return new int[] {0, 0};
         
-        }
     }
+}
     
