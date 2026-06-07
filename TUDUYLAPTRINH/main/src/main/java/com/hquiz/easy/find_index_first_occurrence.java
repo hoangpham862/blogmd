@@ -16,7 +16,6 @@ public class find_index_first_occurrence {
         for (int i = 0, j = t.length(); j < s.length(); i++, j++) {
             if (s.substring(i, j).equals(t))
                 return i;
-
         }
         return -1;
     }
